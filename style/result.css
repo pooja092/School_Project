@@ -1,0 +1,222 @@
+*{
+    font-family: lobstar;
+   
+}
+.certificate{
+    text-align: center !important;
+    margin-left: 40%;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    width: 20%;
+    align-items: center !important;
+    margin-bottom: 50px;
+    justify-content: center !important;
+    margin-top: 30px;
+}
+
+.logo {
+    height: 100px;
+    margin-left: -70px;
+}
+.scholl-details >p  {
+margin: 0;
+padding: 0;
+
+
+    
+}
+.form-div{
+    border: solid 1px gray;
+    padding: 30px 30px 30px 30px;
+    /* margin: 10px 10px 10px 10px; */
+    width: 115% !important;
+    margin-left: -85px;
+}
+
+
+
+.submit-btn{
+    /* width: 10%; */
+    background-color: rgb(18, 18, 18);
+    color: white;
+    height: 50px;
+    border-radius: 20px;
+    padding: 9px 20px 15px 20px !important;
+    /* margin-left: 60rem !important; */
+   /* margin-top: -15px; */
+
+    
+}
+.right-logo{
+    height: 100px;
+    margin-left: 120px;
+}
+.main-div{
+    border: 1px solid rgb(105, 105, 105);
+    width: 98%;
+    text-align: center;
+    margin-left: 17px;
+    margin-top: 30px;
+}
+
+.student-profile{
+    border: solid 1px rgb(53, 53, 53);
+    border-radius: 40px;
+    width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+    /* margin-left: -80px; */
+    margin-left: 4px;
+    
+
+}
+
+.profile{
+    color: darkslateblue;
+ text-align: left;
+
+}
+.stu-profile{
+ text-align: left;
+}
+
+.profile-img{
+    width: 70%;
+    height: 220px;
+    margin-top: 10px;
+    background-color: gray;
+    /* margin-top: -25px; */
+    /* margin-left: 20px; */
+}
+.stu-img{
+width: 100%;
+height: 100%;
+}
+.fill-profile{
+    text-align: left;
+    margin-left: 50px;
+}
+.roll{
+    margin-top: 50px;
+}
+.table-row{
+    border: 1px solid rgba(85, 85, 85, 0.833);
+    margin-top: 10px;
+    margin-left: 9px;
+    
+
+}
+
+.different-color{
+    color: darkslateblue;
+}
+
+
+/* 
+.border-dark >table{
+    border-collapse: collapse;
+} */
+
+.dashboard-div{
+    border: solid 2px  rgb(218, 215, 215);
+    margin-left:30px !important;
+    width: 95%;
+    margin-top: 20px;
+    /* padding: 10px 10px 10px 10px; */
+    /* height: 30px; */
+}
+
+.link-btn{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.table-btn{
+    text-align: left;
+    margin-left: 10px;
+    border: 1px solid;
+    padding: 13px;
+    margin: 5px 5px 5px 5px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+
+
+ @media screen and (max-width: 700px){
+    .form-div{
+            border: solid 1px gray;
+            /* padding: 30px 30px 30px 30px; */
+            /* margin: 20px 20px 20px 20px; */
+            width: 100% !important;
+            margin-left: -2px;
+        }
+
+    .main-div{
+        border: 2px solid rgba(85, 85, 85, 0.833);
+        width: 98%;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+    .fill-profile{
+        text-align: left;
+        margin-left: 20px;
+        font-size: 12px;
+    }
+
+    .profile{
+        text-align: left;
+        font-size: 12px;
+       
+       }
+      .roll{
+        font-size: 12px;
+        text-align: left;
+       margin-top: 15px;
+
+       }
+
+       .profile-img{
+        width: 90%;
+        height: 220px;
+        margin-top: 10px;
+        margin-left: 20px;
+        background-color: gray;
+        /* margin-top: -25px; */
+        /* margin-left: 20px; */
+    }
+
+    .form-div{
+        border: solid 1px gray;
+        padding: 30px 30px 30px 30px;
+        margin: 20px 20px 20px 20px;
+        width: 100%;
+        margin-left: -0px;
+    }
+
+    .certificate{
+        text-align: center;
+        margin-left: 23%;
+        color: white;
+        background-color: black;
+        font-size: 20px;
+        width: 50%;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .dashboard-div{
+        border: solid 2px  rgb(218, 215, 215);
+        margin-left:10px !important;
+        width: 95%;
+        margin-top: 20px;
+        /* padding: 10px 10px 10px 10px; */
+        /* height: 30px; */
+    }
+
+ 
+}
