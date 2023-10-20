@@ -24,8 +24,7 @@ include('header.php');
     });
 </script>
 
-<?php
-?>
+
 
 
 <body>
@@ -45,10 +44,9 @@ include('header.php');
 
 
 
-
-    <div class="container-fluid ">
-        <div class="certificate">RESULT</div>
-        <form id="insert_form" class="row g-3 form-div" action="result.php" method="post">
+<div class="container mt-5 ">
+      
+        <form id="insert_form" class="row g-3 form-div mt-5" action="result.php" method="post">
 
             <div class="col-md-4">
                 <label for="inputPassword4" class="form-label">Session</label>
@@ -222,7 +220,7 @@ include('header.php');
 
         </form>
 
-    </div>
+</div>
 
 
     <!-- create data -->

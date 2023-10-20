@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2023 at 09:03 AM
+-- Generation Time: Oct 20, 2023 at 04:11 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -42,7 +42,7 @@ CREATE TABLE `character_certificate` (
 --
 
 INSERT INTO `character_certificate` (`id`, `name`, `father_name`, `Session`, `roll_no`, `dob`, `class_name`) VALUES
-(1, 'Saloni', 'VIPUL GUPTA', '2021-2023', 22, '16-2-1991', '5'),
+(1, 'Saloni', 'Bhupan singh', '2021-2023', 22, '16-2-1991', '5'),
 (2, 'Pooja Mishra', 'j.p', '2021-2023', 25, '16-2-1991', '8'),
 (3, 'Deepak', 'Bhupan singh', '2021-2023', 22, '21-08-2024', '8'),
 (4, 'Pooja Mishra', 'j.p', '2021-2023', 22, '16-2-1991', '8'),
@@ -64,7 +64,7 @@ INSERT INTO `character_certificate` (`id`, `name`, `father_name`, `Session`, `ro
 --
 
 CREATE TABLE `registration_certificate` (
-  `admission_no` int(200) NOT NULL,
+  `id` int(200) NOT NULL,
   `first_name` varchar(200) NOT NULL,
   `last_name` varchar(200) NOT NULL,
   `doa` int(200) NOT NULL,
@@ -91,8 +91,9 @@ CREATE TABLE `registration_certificate` (
 -- Dumping data for table `registration_certificate`
 --
 
-INSERT INTO `registration_certificate` (`admission_no`, `first_name`, `last_name`, `doa`, `class_no`, `dob`, `age`, `gender`, `board`, `sibling`, `aadhar_no`, `contact_no`, `category`, `father_name`, `mother_name`, `father_occupation`, `mother_occupation`, `present_address`, `permanent_address`, `city`, `religion`) VALUES
-(1, 'salu', 'mishra', 12, '5', 15, 12, 'male', 'cbsc', '2', 2147483647, 2147483647, 'general', 'papu', 'reena', 'job', 'job', 'Mansrowar', 'mansrowar', 'mbd', 'Hindu');
+INSERT INTO `registration_certificate` (`id`, `first_name`, `last_name`, `doa`, `class_no`, `dob`, `age`, `gender`, `board`, `sibling`, `aadhar_no`, `contact_no`, `category`, `father_name`, `mother_name`, `father_occupation`, `mother_occupation`, `present_address`, `permanent_address`, `city`, `religion`) VALUES
+(3, 'Pooja', 'Mishra', 12, '5', 0, 0, 'choose', '', '', 0, 0, '', '', '', '', '', '', '', '', ''),
+(4, 'Salu', 'Mishra', 12, '5', 16, 20, 'Female', 'CBSC', 'yes', 2147483647, 2147483647, 'GENERAL', 'j.p', 'Geeta', 'job', 'job', 'Mansrowar', 'Mansrowar', 'mbd', 'Hindu');
 
 -- --------------------------------------------------------
 
@@ -183,7 +184,7 @@ CREATE TABLE `transfer_certificate` (
 --
 
 INSERT INTO `transfer_certificate` (`id`, `registration`, `name`, `mother_name`, `father_name`, `national`, `category`, `dob`, `failed`, `sbj`, `class_name`, `board`, `higher_class`, `fees_paid`, `fees_concession`, `ncc`, `roll`, `leaving_school`, `meeting_date`, `pupil_attended`, `genral_conduct`, `remark`, `certificate_date`) VALUES
-(24, '21456', 'saloni', 'SWETA GUPTA', 'Bhupan singh', 'INDIAN', 'GENERAL', '16-2-1991', 'Choose', 'English,Math', '8', 'CBSC', 'Choose', 'Choose', 'Choose', 'Choose', 'yes', 'LAST CLASS PASSED', 'yes', 'test', 'GOOD', 'yes', '04/09/2022'),
+(24, '21456', 'saloni', 'SWETA GUPTA', 'Bhupan singh', 'INDIAN', 'GENERAL', '16-2-1991', 'Choose', 'English,Math', '5', 'CBSC', 'Choose', 'Choose', 'Choose', 'Choose', 'yes', 'LAST CLASS PASSED', 'yes', 'test', 'GOOD', 'yes', '04/09/2022'),
 (25, 'U222/81774/0052', 'Pooja Mishra', 'SWETA GUPTA', 'Papu', 'INDIAN', 'GENERAL', '16-2-1991', '2', 'English,Math', '7', 'CBSC', '1', '1', '2', '1', 'yes', 'LAST CLASS PASSED', 'yes', 'test', 'GOOD', 'yes', '04/09/2022'),
 (26, 'U222/81774/0052', 'Deepak', 'SWETA GUPTA', 'Papu', 'INDIAN', 'GENERAL', '16-2-1991', 'Choose', 'English,Math', '7', 'CBSC', '1', '1', '1', '1', 'yes', 'LAST CLASS PASSED', 'yes', 'test', 'GOOD', 'yes', '04/09/2022'),
 (27, 'U222/81774/0052', 'Deepak', 'SWETA GUPTA', 'Bhupan singh', 'INDIAN', 'GENERAL', '16-2-1991', '1', 'English,Math', '5', 'CBSC', '1', '1', '1', '1', 'yes', 'LAST CLASS PASSED', 'yes', 'test', 'GOOD', 'yes', '04/09/2022'),
@@ -229,7 +230,7 @@ ALTER TABLE `character_certificate`
 -- Indexes for table `registration_certificate`
 --
 ALTER TABLE `registration_certificate`
-  ADD PRIMARY KEY (`admission_no`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `transfer_certificate`
@@ -257,7 +258,7 @@ ALTER TABLE `character_certificate`
 -- AUTO_INCREMENT for table `registration_certificate`
 --
 ALTER TABLE `registration_certificate`
-  MODIFY `admission_no` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `transfer_certificate`

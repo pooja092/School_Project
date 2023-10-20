@@ -33,14 +33,14 @@ include "database.php";
 <table class="table table-bordered border-dark ">
   <thead>
     <tr>
-      <th class="text-center" scope="col">Admission_No</th>
-      <th class="text-center" scope="col">First_Name</th>
-      <th class="text-center" scope="col">Last_Name</th>
-     <th class="text-center" scope="col">D.O.A</th> 
-     <th class="text-center" scope="col">Class</th>
-      <th class="text-center" scope="col">D.O.B</th>
-      <th class="text-center" scope="col">Age</th> 
-      <th class="text-center" scope="col" colspan="2">Action</th>
+      <th  scope="col">Admission_No</th>
+      <th  scope="col">First_Name  </th>
+      <th  scope="col">Last_Name   </th>
+      <th   scope="col">D.O.A      </th> 
+      <th   scope="col">Class      </th>
+      <th  scope="col">D.O.B       </th>
+      <th  scope="col">Age         </th> 
+      <th  scope="col" colspan="2">Action</th>
     </tr>
 </thead>
 
@@ -53,6 +53,7 @@ include "database.php";
         while ($row=mysqli_fetch_array($data)){
             ?>
             <tr>
+
                 <td><?php echo $row['id'] ?></td>
                 <td><?php echo $row['first_name'] ?></td>
                 <td><?php echo $row['last_name'] ?></td>
@@ -60,8 +61,11 @@ include "database.php";
                 <td><?php echo $row['class_no'] ?></td>
                 <td><?php echo $row['dob'] ?></td>
                 <td><?php echo $row['age'] ?></td>
-
-        
+                <td class="text-center"><a href="registrationView.php?id=<?php echo $row['id']; ?>">
+                <button class="submit-btn " id="save-btn">View</button></a></td>
+             
+                <td><a href="registrationEdit.php?id=<?php echo $row['id']; ?>">
+                <button class="submit-btn">Update</button></a></td>
 
             </tr>
             <?php

@@ -1,6 +1,11 @@
 <?php
 include "header.php";
 include "database.php";
+$id=$_GET['id'];
+// get one id
+$select="SELECT * FROM registration_certificate WHERE id='$id'";
+$data=mysqli_query($con,$select);
+$row=mysqli_fetch_array($data);
 
 ?>
 
@@ -34,8 +39,8 @@ include "database.php";
     </thead>
    </table>
   
-   <div class="container-fluid mt-5">
-      <div class='form-div mt-5' >
+   <div class="container-fluid">
+      <div class='form-div'>
 
             <div class="container">
             <div class="row">
@@ -197,63 +202,5 @@ include "database.php";
       </div>
     
       <br><br><br><br>
-    
 
-     <!-- create data -->
-     <?php
-     if (isset($_POST['submit'])) {
-        $id = $_POST['id'];
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $doa = $_POST['doa'];
-        $class_no = $_POST['class_no'];
-        $dob = $_POST['dob'];
-        $age = $_POST['age'];
-        $gender = $_POST['gender'];
-        $board = $_POST['board'];
-        $sibling = $_POST['sibling'];
-        $aadhar_no = $_POST['aadhar_no'];
-        $contact_no = $_POST['contact_no'];
-        $category = $_POST['category'];
-        $father_name = $_POST['father_name'];
-        $mother_name = $_POST['mother_name'];
-        $father_occupation = $_POST['father_occupation'];
-        $mother_occupation = $_POST['mother_occupation'];
-        $present_address = $_POST['present_address'];
-        $permanent_address = $_POST['permanent_address'];
-        $city = $_POST['city'];
-        $religion = $_POST['religion'];
-      
-       $query = "INSERT INTO registration_certificate (id,first_name,last_name,doa,
-      class_no,dob,age,gender,board,sibling,aadhar_no,contact_no,category,father_name,mother_name,
-      father_occupation,mother_occupation,present_address,permanent_address,city,religion)
-      VALUES('$id','$first_name','$last_name','$doa','$class_no','$dob','$age','$gender',
-      '$board','$sibling','$aadhar_no','$contact_no','$category','$father_name','$mother_name',
-      '$father_occupation','$mother_occupation','$present_address', '$permanent_address',
-      '$city','$religion')";
-
-
-      $data = mysqli_query($con, $query);
-        // create alert msg
-      if ($data) {
-            // echo "data save";
-            ?>
-            <script type="text/javascript">
-                alert("Data Saved Successfully")
-                window.open("http://localhost/schoolsystem/registrationList.php", "_self")
-
-            </script>
-            <?php
-      } else {
-            // echo "Please try again";
-            ?>
-            <script type="text/javascript">
-                alert("Please try again")
-            </script>
-            <?php
-        }
-    }
-    ?>
-    <!--end create data -->
-
-      </body>
+</body>
